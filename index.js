@@ -11,7 +11,7 @@ async function main() {
 		console.log('time zone', timezone)
 		console.log('time format', formatStr)
 
-		const str = dayjs().utcOffset(8).format(formatStr)
+		const str = dayjs().utcOffset(timezone).format(formatStr)
 		console.log(str)
 
 		core.setOutput("time", str);
